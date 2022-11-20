@@ -1,30 +1,35 @@
 variable "target_host" {
   type        = string
   description = "DNS host to deploy to"
+  sensitive   = true
 }
 
 variable "target_user" {
   type        = string
   description = "SSH user used to connect to the target_host"
   default     = "root"
+  sensitive   = true
 }
 
 variable "target_port" {
   type        = number
   description = "SSH port used to connect to the target_host"
   default     = 22
+  sensitive   = true
 }
 
 variable "ssh_private_key" {
   type        = string
   description = "Content of private key used to connect to the target_host"
   default     = ""
+  sensitive   = true
 }
 
 variable "ssh_private_key_file" {
   type        = string
   description = "Path to private key used to connect to the target_host"
   default     = ""
+  sensitive   = true
 }
 
 variable "ssh_agent" {
